@@ -1,0 +1,359 @@
+body {
+  line-height: 1;
+  height: 100vh;
+  background: #fff;
+}
+
+#overview {
+  height: 90vh;
+}
+
+#main-vis {
+  border-bottom: 2px solid #dadada;
+}
+
+.svg-container {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+
+svg{
+  overflow: visible;
+}
+
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+#spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.hide {
+  display: none;
+}
+
+.toolbar {
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #525252;
+  padding-bottom: 2.5px;
+}
+
+.toolbar-border-right {
+  border-right: 1px solid #525252;
+}
+
+.toolbar-border-left {
+  border-left: 1px solid #525252;
+}
+
+.margin-to-buttons {
+  margin-bottom: 5px;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.navbar {
+  padding: 0rem 0rem;
+}
+
+.bootstrap-select {
+  margin-top: 5px;
+}
+
+.cell{
+  stroke: #252525;
+  stroke-opacity: 0.2;
+  stroke-width: 0.2px;
+}
+
+.col-g.highlighted > .cell{
+  stroke: #252525;
+  stroke-opacity: 1;
+  stroke-width: 1px;
+}
+
+.col-g.selected  > .cell{
+  stroke: #252525;
+  stroke-opacity: 0.7;
+  stroke-width: 1.5px;
+}
+
+.zoom-rect.selected{
+  stroke: #252525;
+  stroke-opacity: 0.7;
+  stroke-width: 1.5px;
+}
+
+.zoom-rect.highlighted{
+  stroke: #252525;
+  stroke-opacity: 1;
+  stroke-width: 1.5px;
+}
+
+.zoom-line{
+  stroke: #343a40;
+  stroke-opacity: 0.7;
+  stroke-width: 2px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.legend {
+  stroke: #000;
+}
+
+.legend-text{
+  font-size: 0.9em;
+}
+
+.selection-group-rect{
+  fill: #fff
+}
+
+.selection{
+  fill: #343a40;
+  fill-opacity:0.2;
+}
+
+#nav-rect-background{
+  fill: #f3f3f3;
+  stroke: #343a40;
+  stroke-width: 1px;
+  stroke-opacity: 0.5;
+}
+
+#graph-background{
+  fill: #fff;
+  stroke: #343a40;
+  stroke-width: 1px;
+  stroke-opacity: 0.5;
+}
+
+#graph-legend-background{
+  fill: #e6e6e6;;
+  stroke: #343a40;
+  stroke-width: 1px;
+  stroke-opacity: 0.5;
+}
+
+#graph-vis{
+  padding-bottom: 60px;
+}
+
+#tooltip {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+  border-width: 1px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  padding:10px;
+  pointer-events: none;
+}
+
+#tooltip p {
+  margin: 0;
+  font-family: Futura;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.cluster-rect{
+  fill: transparent;
+  stroke-width: 1.5px;
+  stroke: #343a40;
+  stroke-opacity: 0.8;
+}
+
+.link {
+  stroke-width: 2px;
+  stroke: grey
+}
+
+.link.intersection {
+  stroke: #ff7f0e;
+}
+
+.link.disjoint {
+  stroke: #1f77b4;
+}
+
+.link.faded {
+  stroke-opacity: 0.2;
+  fill-opacity: 0.2;
+}
+
+.link.highlighted {
+  stroke-width: 3px;
+  stroke-opacity: 1;
+  fill-opacity: 1;
+}
+
+.node {
+  cursor: move;
+  fill: grey;
+}
+
+.node.intersection {
+  fill: #ff7f0e;
+}
+
+.node.disjoint {
+  fill: #1f77b4;
+}
+
+.node.hovered {
+  fill: #2D4057;
+}
+
+.node.fixed {
+  fill:#2D4057
+}
+
+.node.faded {
+  stroke-opacity: 0.2;
+  fill-opacity: 0.2;
+}
+
+.node.highlighted {
+  stroke-width: 1.5px;
+  stroke-opacity: 1;
+  fill-opacity: 1;
+}
+
+.nodes{
+  stroke: rgb(255, 255, 255);
+  stroke-width: 1.5;
+}
+
+.nodes text {
+  font-family: Futura;
+  font-size: 1.5em;
+  line-height: 20px;
+  fill: #000;
+  filter: url(#svg-text-background);
+  font-weight: bold;
+}
+
+.links text {
+  font: 1em sans-serif;
+  fill: #000;
+  filter: url(#svg-text-background);
+  font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+  .modal-lg {
+    max-width: 1400px ;
+  }
+}
+
+.mdi::before {
+  font-size: 24px;
+  line-height: 14px;
+}
+
+.btn .mdi::before {
+  position: relative;
+  top: 4px;
+}
+
+.btn-xs .mdi::before {
+  font-size: 18px;
+  top: 3px;
+}
+
+.btn-sm .mdi::before {
+  font-size: 18px;
+  top: 3px;
+}
+
+.dropdown-menu .mdi {
+  width: 18px;
+}
+
+.dropdown-menu .mdi::before {
+  position: relative;
+  top: 4px;
+  left: -8px;
+}
+
+.nav .mdi::before {
+  position: relative;
+  top: 4px;
+}
+
+.navbar .navbar-toggle .mdi::before {
+  position: relative;
+  top: 4px;
+  color: #fff;
+}
+
+.breadcrumb .mdi::before {
+  position: relative;
+  top: 4px;
+}
+
+.breadcrumb a:hover {
+  text-decoration: none;
+}
+
+.breadcrumb a:hover span {
+  text-decoration: underline;
+}
+
+.alert .mdi::before {
+  position: relative;
+  top: 4px;
+  margin-right: 2px;
+}
+
+.input-group-addon .mdi::before {
+  position: relative;
+  top: 3px;
+}
+
+.navbar-brand .mdi::before {
+  position: relative;
+  top: 2px;
+  margin-right: 2px;
+}
+
+.list-group-item .mdi::before {
+  position: relative;
+  top: 3px;
+  left: -3px;
+}
+
+.carousel-control-next {
+  filter: invert(100%);
+}
+
+.carousel-control-prev {
+  filter: invert(100%);
+}
+
+.carousel-caption {
+  color: #000;
+  position: relative;
+  left: 0;
+  top: 0;
+}
